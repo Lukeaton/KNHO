@@ -1,0 +1,17 @@
+<div class="heading">
+  <h1>New reviews</h1>
+</div>
+
+
+<div class= "reviews1">
+  <p><% @movies.each do |movie| %>
+  <% if movie.image.present? %>
+  <%= image_tag movie.image%></p>
+  <div class="deets"><%= movie.title %></div>
+  <div class="deets"><%= movie.year %></div>
+  <div class="deets"><%= movie.director.name %></div>
+  <div class="plot">Plot<p><%= movie.plot %></p></div>
+  <div class="reviewtext">Review<p><%= movie.review %></p></div>
+      <% end %>
+    <% end %>
+</div>

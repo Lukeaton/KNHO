@@ -1,0 +1,30 @@
+
+
+
+
+<div class="editfield">
+  <h1>Editor</h1>
+  <%= form_for @movie do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, :autofocus => true %>
+
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+
+    <%= f.label :Released %>
+    <%= f.number_field :year %>
+
+    <%= f.label :Summary %>
+    <%= f.text_field :plot %>
+
+    <%= f.label :rating %>
+    <%= f.select :rating, 1..5 %>
+
+
+    <%= f.label :Review %>
+    <%= f.text_field :review, class: "your_class" %>
+
+
+    <%= f.submit %>
+  <% end %>
+</div>

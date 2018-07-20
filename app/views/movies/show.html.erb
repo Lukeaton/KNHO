@@ -1,0 +1,19 @@
+<div class="reviews">
+
+  <div class="item1">  <h2><%= @movie.title %></h2>
+</div>
+  <div class="item2"><% if @movie.image.present? %>
+  <%= image_tag @movie.image%>
+  <% end %></div>
+  <div class="item3">Released : <%= @movie.year %></div>
+  <div class="item4"><h4><% if @movie.director.present? %>
+  Director: <%= @movie.director.name %>
+  <% end %></h4></div>
+  <div class="item5"><p><%= @movie.plot %></p></div>
+  <div class="item6"><h4>Review: </h4><p><%= @movie.review %></p></div>
+  <div class="item7"><%= link_to "Edit details", edit_movie_path(@movie) %></div>
+  <div class="item8"><%= button_to "delete", {:controller => :movies,
+        :action => 'destroy', :id => @movie.id }, :method => :delete %></div>
+  <div class="item9"></div>
+  <div class="item10"></div>
+</div>

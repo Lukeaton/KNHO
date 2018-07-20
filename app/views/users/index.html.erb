@@ -1,0 +1,10 @@
+<h1>Users#index</h1>
+<ul>
+<% @users.each do |user| %>
+  <li>
+    <% @user = user %>
+    <%= @user.email %>
+    <%= link_to "Delete", '/users/:id(.:format)' %>
+  </li>
+<% end %>
+</ul>
