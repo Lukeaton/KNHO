@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   BASE_IMAGE_URL="http://image.tmdb.org/t/p/"
   BASE_MOVIE_URL="https://api.themoviedb.org/3/movie/"
   BASE_PERSON_URL = "https://api.themoviedb.org/3/person/"
-  API_KEY="46d39db6e598de223aed4b98026877c6"
+  API_KEY=""
 
   before_action :fetch_user
 
